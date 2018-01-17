@@ -1,0 +1,37 @@
+<footer class="footer img-rounded spacer">
+    <div class="row clearfix ">
+        <form class="form-inline" role="form" id="contact-form" action="" method="post" >
+                <div class="col-md-12 column">
+                      <div class="form-group form-group-lg">
+                        <input type="text" class="form-control" size="7" name="qrz" id="qrz" placeholder="QRZ?">
+                      </div>
+                      <div class="form-group form-group-lg">
+                        <input type="email" class="form-control" size="25" name="email" id="emailaddress" placeholder="Email address?">
+                      </div>
+                      <div class="form-group qso-wrapper form-group-lg">
+                          <textarea class="form-control qso span10" id="qso"  name="qso" rows="1" placeholder="QSO"></textarea>
+                      </div>
+                <button type="submit" class="btn btn-default">TX</button>
+                </div>
+            {% csrf_token %}
+        </form>
+    </div>
+    <div class="row clearfix spacer ">
+        <div class="col-md-4 column">
+
+        </div>
+        <div class="col-md-4 column">
+
+        </div>
+        <div class="col-md-4 column">
+
+        </div>
+    </div>
+    <div class="row clearfix spacer">
+        <div class="col-md-12 column">
+            <p class="copyright">
+              SV7FOX&nbsp;©&nbsp;{% now "Y" %}
+            </p>
+        </div>
+    </div>
+</footer>

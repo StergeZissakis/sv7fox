@@ -1,0 +1,5 @@
+db.sqlite3*
+media*
+sqlite.json
+static*
+sv7foxenv

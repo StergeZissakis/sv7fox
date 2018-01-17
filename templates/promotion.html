@@ -1,0 +1,16 @@
+        {% for promo in promos %}
+            <div class="jumbotron spacer">
+				<h1>
+					{{ promo.title }}
+				</h1>
+				<p>
+                    <img alt="{{  promo.image.alt }}" src="{{ promo.image.get_image_url }}" class="img-thumbnail img-rounded half-img">
+				</p>
+				<p>
+					{{ promo.summary }}.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="{{ promo.slug }}">Λεπτομέρειες</a>
+				</p>
+			</div>
+        {% endfor %}

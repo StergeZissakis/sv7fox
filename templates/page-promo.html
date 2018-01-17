@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+        {%  block header %}
+            {%  include "header-carousel.html" %}
+        {% endblock %}
+        {%  block content %}
+            <div class="row clearfix">
+                <div class="col-md-8 column">
+                    <div class="page-header">
+                        <h1>
+                            {{ current_page.title | safe}} 
+                        </h1>
+                        <h2>
+                            <small>{{ current_page.summary | safe}}</small>
+                        </h2>
+                    </div>
+                    <img alt="{{ current_page.image.alt }}" src="{{ current_page.image.get_image_url }}" class="img-rounded">
+                    <p>
+                        {{ current_page.content | safe }}
+                    </p>
+                </div>
+            {% include "page-sidebar.html" %}
+            </div>
+        {% endblock %}

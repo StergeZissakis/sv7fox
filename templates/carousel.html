@@ -1,0 +1,31 @@
+        <div class="col-md-12 column">
+            <div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="carousel slide spacer" id="carousel-sv7fox">
+						<ol class="carousel-indicators">
+                            {%  for cimage in carouselImages %}
+							<li data-slide-to="{{ forloop.counter0 }}" data-target="#carousel-sv7fox" {%  if forloop.first %}class="active"{%  endif %}>
+							</li>
+                            {%  endfor %}
+						</ol>
+						<div class="carousel-inner">
+                            {%  for cimage in carouselImages %}
+                                <div class="item{%  if forloop.first %} active {%  endif %}">
+                                    <img alt="{{ cimage.alt }}" src="{{ cimage.get_image_url }}" class="img-rounded">
+                                    <div class="carousel-caption">
+                                        <h4>
+                                            {{cimage.label}}
+                                        </h4>
+                                        <p>
+                                            {{ cimage.description }}
+                                        </p>
+                                    </div>
+                                </div>
+                            {%  endfor %}
+						</div>
+                        <a class="left carousel-control" href="#carousel-sv7fox" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                        <a class="right carousel-control" href="#carousel-sv7fox" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+				</div>
+			</div>
+        </div>

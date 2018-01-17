@@ -1,0 +1,4 @@
+.elasticbeanstalk/
+migrations*
+__pycache__
+settings.py
