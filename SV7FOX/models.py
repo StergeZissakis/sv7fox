@@ -47,7 +47,7 @@ class Page(models.Model):
 
 class Menu(MPTTModel):
     parent = TreeForeignKey('self', null=True, blank=True, related_name='parent_menu', verbose_name="Parent", on_delete=models.SET_NULL)
-    page = models.OneToOneField(Page, verbose_name="Page", related_name="menu_page", blank=False, null=False, on_delete=models.SET_NULL)
+    page = models.OneToOneField(Page, verbose_name="Page", related_name="menu_page", blank=False, null=False, on_delete=models.PROTECT)
     order = models.PositiveIntegerField()
 
     class MPTTMeta:

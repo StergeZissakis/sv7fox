@@ -66,7 +66,9 @@ def broker(request, path):
                                       { 'icon': 'skype', 'link': 'skype:sv7fox-htc?call', 'code': '' },
                                       { 'icon': 'twitter', 'link': '//twitter.com/@Sv7foxPanos', 'code': ''}, ),
                     'seo': {'keywords': head_keywords, 'description': head_description, 'title': head_title },
-                    'settings': settings}, )
+                    'settings': settings
+										}
+									 )
 
 
 class ContactForm(forms.Form):
